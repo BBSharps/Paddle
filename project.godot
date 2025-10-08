@@ -11,12 +11,17 @@ config_version=5
 [application]
 
 config/name="Paddle"
-config/features=PackedStringArray("4.4", "GL Compatibility")
+run/main_scene="uid://blf8hcd540iby"
+config/features=PackedStringArray("4.5", "GL Compatibility")
 
 [display]
 
 window/size/viewport_width=360
 window/size/viewport_height=640
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg")
 
 [rendering]
 

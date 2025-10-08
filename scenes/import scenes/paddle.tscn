@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://crnnchuarpbq8"]
+
+[ext_resource type="Texture2D" uid="uid://bluup57iaaohx" path="res://assets/paddle/paddle_sprite.png" id="1_whn51"]
+
+[node name="Paddle" type="CharacterBody2D"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(33, 1, 35, 3, 35, 7, 33, 9, 3, 9, 1, 7, 1, 3, 3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_whn51")
+centered = false
