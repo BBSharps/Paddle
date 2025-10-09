@@ -10,6 +10,7 @@ func _physics_process(_delta: float)->void:
 	
 func _process(_delta: float)->void:
 	self.velocity.x = 0
+	self.velocity.y = 0
 	
 	match Input.is_action_pressed("ui_left") :
 		true:

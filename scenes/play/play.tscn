@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://blf8hcd540iby"]
+[gd_scene load_steps=8 format=3 uid="uid://blf8hcd540iby"]
 
 [ext_resource type="PackedScene" uid="uid://crnnchuarpbq8" path="res://scenes/import scenes/paddle.tscn" id="1_3t680"]
 [ext_resource type="Script" uid="uid://cqpjuu0dobrs4" path="res://scripts/paddle/paddle_script.gd" id="2_fxwjs"]
+[ext_resource type="PackedScene" uid="uid://dtaobi5a4k10s" path="res://scenes/import scenes/ball.tscn" id="3_fxwjs"]
+[ext_resource type="Script" uid="uid://biq0v6uo5lhba" path="res://scripts/ball/ball_script.gd" id="4_kpfyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo7ax"]
 size = Vector2(1, 641)
@@ -35,3 +37,11 @@ shape = SubResource("RectangleShape2D_3t680")
 [node name="Paddle" parent="." instance=ExtResource("1_3t680")]
 position = Vector2(162, 625)
 script = ExtResource("2_fxwjs")
+
+[node name="Ball" parent="." instance=ExtResource("3_fxwjs")]
+position = Vector2(180, 500)
+script = ExtResource("4_kpfyx")
+
+[connection signal="area_entered" from="Ball/BallArea2D" to="Ball" method="_on_ball_area_2d_area_entered"]
+
+[editable path="Ball"]
