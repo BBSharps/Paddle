@@ -8,9 +8,8 @@ func _ready() -> void:
 func _physics_process(_delta: float)->void:					
 	move_and_slide()
 	
-func _process(_delta: float)->void:
 	self.velocity.x = 0
-	self.velocity.y = 0
+	self.position.y = 625
 	
 	match Input.is_action_pressed("ui_left") :
 		true:
