@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://blf8hcd540iby"]
+[gd_scene load_steps=11 format=3 uid="uid://blf8hcd540iby"]
 
 [ext_resource type="PackedScene" uid="uid://crnnchuarpbq8" path="res://scenes/import scenes/paddle.tscn" id="1_3t680"]
 [ext_resource type="Script" uid="uid://bd4uy0g1xpl7m" path="res://scripts/play/play_script.gd" id="1_tdyfg"]
+[ext_resource type="Script" uid="uid://5561hk6xtwbj" path="res://scripts/bumper/bumper_script.gd" id="2_fe62l"]
 [ext_resource type="Script" uid="uid://cqpjuu0dobrs4" path="res://scripts/paddle/paddle_script.gd" id="2_fxwjs"]
 [ext_resource type="PackedScene" uid="uid://dtaobi5a4k10s" path="res://scenes/import scenes/ball.tscn" id="3_fxwjs"]
 [ext_resource type="Script" uid="uid://biq0v6uo5lhba" path="res://scripts/ball/ball_script.gd" id="4_kpfyx"]
@@ -22,18 +23,21 @@ size = Vector2(711, 50)
 script = ExtResource("1_tdyfg")
 
 [node name="RightBumper" type="StaticBody2D" parent="."]
+script = ExtResource("2_fe62l")
 
 [node name="RightBumperCollisionShape2D" type="CollisionShape2D" parent="RightBumper"]
 position = Vector2(360.5, 319.5)
 shape = SubResource("RectangleShape2D_lo7ax")
 
 [node name="TopBumper" type="StaticBody2D" parent="."]
+script = ExtResource("2_fe62l")
 
 [node name="TopBumperCollisionShape2D" type="CollisionShape2D" parent="TopBumper"]
 position = Vector2(180, -0.5)
 shape = SubResource("RectangleShape2D_u5o7e")
 
 [node name="LeftBumper" type="StaticBody2D" parent="."]
+script = ExtResource("2_fe62l")
 
 [node name="LeftBumperCollisionShape2D" type="CollisionShape2D" parent="LeftBumper"]
 position = Vector2(-0.5, 319.5)
@@ -48,6 +52,7 @@ position = Vector2(180, 500)
 script = ExtResource("4_kpfyx")
 
 [node name="BottomArea" type="Area2D" parent="."]
+script = ExtResource("2_fe62l")
 
 [node name="BottomAreaCollisionShape2D" type="CollisionShape2D" parent="BottomArea"]
 position = Vector2(180, 681)

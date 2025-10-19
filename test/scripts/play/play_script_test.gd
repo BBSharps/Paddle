@@ -5,7 +5,7 @@ extends GdUnitTestSuite
 @warning_ignore('return_value_discarded')
 
 # TestSuite generated from
-const __source: String = 'res://scripts/play/play_script.gd'
+const __source = 'res://scripts/play/play_script.gd'
 const __scene = "res://scenes/play/play.tscn"
 
 func test_on_bottom_area_body_entered_respawn() -> void:
