@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 var speed: float = 1
+var type: String = "Paddle"
 
 func _ready() -> void:
 	pass

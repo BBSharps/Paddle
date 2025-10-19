@@ -9,9 +9,11 @@ func _physics_process(delta: float)->void:
 	if collision:
 		var collider = collision.get_collider()
 		var return_velocity: Vector2 = velocity.bounce(collision.get_normal())
-		match collider.name:
+		match collider.type:
 			"Paddle":
 				return_velocity.x += collider.velocity.x
+			"Block":
+				collider.ball_hit(-1)
 		velocity = return_velocity
 	
 	match velocity.y >= -50 and velocity.y <= 50:
